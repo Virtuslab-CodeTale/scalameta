@@ -86,5 +86,38 @@
     "commit" : "36850e57f28cc44197c956ad93111094368a8c93",
     "line" : 26,
     "diffHunk" : "@@ -1,1 +647,651 @@    assert(q\"val `a+` = 2\".syntax == \"val `a+` = 2\")\n    assert(q\"val `a-b` = 2\".syntax == \"val `a-b` = 2\")\n    assert(q\"val `a:b` = 2\".syntax == \"val `a:b` = 2\")\n\n    // Comments must be handled carefully"
+  },
+  {
+    "id" : "e6f59646-fcce-4023-b4a4-023abcdf1c81",
+    "prId" : 2448,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2448#pullrequestreview-727592205",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "60bbb9d8-11c8-4415-b358-d6c726ba4edf",
+        "parentId" : null,
+        "authorId" : "ac5ed7d7-17a6-48d0-a426-0b37bf9febdb",
+        "body" : "Could you also add a test with object name in backtics?\r\n```scala\r\ncheckTree(q\"{ case x @ `y` => x }\", \"{\\n case x @ `y` => x\\n}\")\r\n```",
+        "createdAt" : "2021-08-11T14:32:13Z",
+        "updatedAt" : "2021-08-11T14:33:54Z",
+        "lastEditedBy" : "ac5ed7d7-17a6-48d0-a426-0b37bf9febdb",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8b6a8fe5-1244-48ed-86d2-b28cc1fbb0c5",
+        "parentId" : "60bbb9d8-11c8-4415-b358-d6c726ba4edf",
+        "authorId" : "afdac6fa-bcb7-416e-9452-aa67caa7e446",
+        "body" : "Added!",
+        "createdAt" : "2021-08-11T14:53:55Z",
+        "updatedAt" : "2021-08-11T14:53:55Z",
+        "lastEditedBy" : "afdac6fa-bcb7-416e-9452-aa67caa7e446",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "80a1b9a65a31e4fb4bf09de344c4247f560f97d6",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +1090,1094 @@  test(\"#2447 Pat.Bind on Term.Name\") {\n    checkTree(q\"{ case x @ Y => x }\", \"{\\n  case x @ Y => x\\n}\")\n  }\n\n  test(\"#2447 Pat.Bind on Term.Name backticks\") {"
   }
 ]
